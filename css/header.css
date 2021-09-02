@@ -1,0 +1,182 @@
+.header {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/bg-pattern-intro.svg), linear-gradient(135deg, #ff8f70, #ff3d54);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    border-radius: 0 0 0 100px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+}
+.header-content h1{
+    text-align: center;
+}
+.logo {
+    object-fit: cover;
+    flex-shrink: 0;
+    height: 3.3rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
+}
+.navbar-menu {
+    margin-left: 20px;
+}
+.navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex;
+}
+.main-menu-list{
+    margin-left: 3rem;
+}
+.menu-heading-mobile,
+.menu-heading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+/* UX when hover */
+.menu-heading::before {
+    content: "";
+    height: 40px;
+    width: 80px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+}
+.menu-link{
+    color: var(--White-text);
+    margin-right: 10px;
+    opacity: 0.75;
+    border-bottom: 1px solid transparent;
+}
+.sub-menu {
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 95px;
+    margin: 0 auto;
+}
+
+.sub-menu  li a {
+    color: black;
+}
+/* Hover  */
+.main-menu-list:hover .menu-link{
+    border-bottom: 1px solid white;
+    opacity: 1;
+}
+
+.main-menu-list:hover img {
+    /* Turn the picture arrow */
+    transform: rotate(0.5turn);
+}
+
+.main-menu > .main-menu-list:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 10%;
+    margin-left: -2rem;
+    padding: 20px 30px;
+    line-height: 2rem;
+    cursor: pointer;
+}
+
+.sub-menu  li  a:hover {
+    font-weight: bold;
+}
+/*  END hover*/
+.menu-heading img {
+    object-fit: cover;
+    height: 7px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    flex-shrink: 0;
+}
+
+.btn-login{
+    border: none;
+    background-color: transparent;
+    color: var(--White-text);
+    opacity: 0.75;
+    padding: 12px 35px;
+}
+.btn-signup{
+    background-color: var(--White-text);
+    border: none;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: var(--light-red--CTA-text);
+    opacity: 1;
+}
+
+/* hover btn-signup btn start for free */
+.btn-signup:hover,
+.btn-start-for-free:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+.header-content h1 {
+    color: var(--White-text);
+    padding-bottom: 10px;
+    font-size: 4rem;
+}
+.header-content p {
+    opacity: 0.75;
+    color: var(--White-text);
+}
+
+.header-content .wrap-button {
+    display: flex;
+    padding: 30px 0px;
+}
+.btn-start-for-free, .btn-learn-more {
+    border-radius: 30px;
+    padding: 15px 1px;
+    width: 138px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.btn-start-for-free {
+    background-color: var(--White-text);
+    color: var(--light-red--CTA-text);
+    border: 1px solid transparent;
+}
+
+.btn-learn-more {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.btn-learn-more:hover {
+    background-color: var(--White-text);
+    color: var(--light-red--CTA-text);
+    border: 1px solid transparent;
+}
